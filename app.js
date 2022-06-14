@@ -70,7 +70,6 @@ function addProduct(x , y){
 //function to add items in chart
 function addChart(f){
     var temp2 = ""
-    var tempForm =""
     for (var index = 0; index < f.length; index++) {
         temp2 +=` <tr>
         <td scope="row">${index +1}</td>
@@ -79,7 +78,6 @@ function addChart(f){
         <td><button class="btn btn btn-danger" onclick="deleteOrder(${index})">Delete</button></td>
         </tr>
         `
-        tempForm +=`<p class="mt-0 text-black" >${f[index].name} <span class="spPrice">${f[index].price}</span></p>`
     }    
 
     document.getElementById("tableBody").innerHTML = temp2
@@ -134,7 +132,6 @@ function total(){
                     <td><button type="button" class="btn btn-success" onclick="out()">Checkout</button></td>
                 </tr>`
                 document.getElementById("footer").innerHTML = temp4;
-                document.getElementById("doooo").innerHTML = `<p class="mt-0 text-black" >Total <span class="spPrice">${sum}</span></p>`
 }
 function out(){
     window.open("form.html")
